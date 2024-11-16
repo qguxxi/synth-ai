@@ -58,6 +58,6 @@ string read_per
 string storage
 string terms_services
 string welcome
-style Theme.Tapper
+style Theme.Tapper.Splash
 xml backup_rules
 xml data_extraction_rules

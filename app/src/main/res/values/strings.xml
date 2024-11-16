@@ -17,7 +17,6 @@
     <string name="read_per">Read external storage permission</string>
     <string name="audio_record">Audio record permission</string>
     <string name="pre_home">Let\'s start experiencing the app right away</string>
-    <string name="default_web_client_id">530061469984-tdkskmiae9u7i51i88l80hogja4b2sc0.apps.googleusercontent.com</string>
     <string name="audio_per">You need accept audio record permission</string>
     <string name="ai_warning_1">AI can sometimes provide unreasonable answers</string>
     <string name="ai_warning_2">Please filter information carefully.</string>

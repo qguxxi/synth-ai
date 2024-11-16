@@ -26,6 +26,7 @@ import androidx.navigation.NavController
 import com.airbnb.lottie.compose.LottieAnimation
 import com.airbnb.lottie.compose.LottieCompositionSpec
 import com.airbnb.lottie.compose.rememberLottieComposition
+import com.qguxxi.synthvoice.BuildConfig
 import com.qguxxi.synthvoice.R
 import com.qguxxi.synthvoice.navigation.Screen
 import com.qguxxi.synthvoice.ui.components.button.GoogleButton
@@ -46,9 +47,11 @@ fun SignInScreen(
 
     val state = rememberOneTapSignInState()
 
+    val apiKey = BuildConfig.API_KEY
+
     OneTapSignInWithGoogle(
         state = state,
-        clientId = context.getString(R.string.default_web_client_id),
+        clientId = apiKey,
         onTokenIdReceived = { tokenId ->
             Log.d("LOG", tokenId)
             navController.navigate(navController.navigate(Screen.NOTIFICATION.name)) {

@@ -70,8 +70,8 @@
 39        android:supportsRtl="true"
 39-->D:\qguxxi\github\project\app\src\main\AndroidManifest.xml:12:9-35
 40        android:testOnly="true"
-41        android:theme="@style/Theme.Tapper" >
-41-->D:\qguxxi\github\project\app\src\main\AndroidManifest.xml:13:9-44
+41        android:theme="@style/Theme.Tapper.Splash" >
+41-->D:\qguxxi\github\project\app\src\main\AndroidManifest.xml:13:9-51
 42        <activity
 42-->D:\qguxxi\github\project\app\src\main\AndroidManifest.xml:15:9-27:20
 43            android:name="com.qguxxi.synthvoice.MainActivity"
@@ -82,8 +82,8 @@
 45-->D:\qguxxi\github\project\app\src\main\AndroidManifest.xml:18:13-45
 46            android:screenOrientation="portrait"
 46-->D:\qguxxi\github\project\app\src\main\AndroidManifest.xml:19:13-49
-47            android:theme="@style/Theme.Tapper" >
-47-->D:\qguxxi\github\project\app\src\main\AndroidManifest.xml:20:13-48
+47            android:theme="@style/Theme.Tapper.Splash" >
+47-->D:\qguxxi\github\project\app\src\main\AndroidManifest.xml:20:13-55
 48            <intent-filter>
 48-->D:\qguxxi\github\project\app\src\main\AndroidManifest.xml:23:13-26:29
 49                <action android:name="android.intent.action.MAIN" />

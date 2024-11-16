@@ -1450,7 +1450,7 @@ int style Theme_AppCompat_Light_DialogWhenLarge 0x7f11010a
 int style Theme_AppCompat_Light_NoActionBar 0x7f11010b
 int style Theme_AppCompat_NoActionBar 0x7f11010c
 int style Theme_Hidden 0x7f11010d
-int style Theme_Tapper 0x7f11010e
+int style Theme_Tapper_Splash 0x7f11010e
 int style ThemeOverlay_AppCompat 0x7f11010f
 int style ThemeOverlay_AppCompat_ActionBar 0x7f110110
 int style ThemeOverlay_AppCompat_Dark 0x7f110111

@@ -7,7 +7,19 @@ plugins {
 }
 
 
+val localProperties = Properties()
+val localPropertiesFile = rootProject.file("local.properties")
+if (localPropertiesFile.exists()) {
+    localProperties.load(localPropertiesFile.inputStream())
+}
+
+// Lấy giá trị API key từ local.properties
+val apiKey = localProperties.getProperty("API_KEY") ?: ""
+
 android {
+    buildFeatures {
+        buildConfig = true
+    }
 
 
 
@@ -21,6 +33,8 @@ android {
         versionCode = 1
         versionName = "1.0"
         // Thêm API key vào BuildConfig
+        // Thêm API key vào BuildConfig
+        buildConfigField("String", "API_KEY", "\"$apiKey\"")
 
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"

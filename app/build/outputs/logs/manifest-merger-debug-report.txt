@@ -183,7 +183,7 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] D:\caches\transforms-4\10c7
 	android:allowBackup
 		ADDED from D:\qguxxi\github\project\app\src\main\AndroidManifest.xml:6:9-35
 	android:theme
-		ADDED from D:\qguxxi\github\project\app\src\main\AndroidManifest.xml:13:9-44
+		ADDED from D:\qguxxi\github\project\app\src\main\AndroidManifest.xml:13:9-51
 	android:dataExtractionRules
 		ADDED from D:\qguxxi\github\project\app\src\main\AndroidManifest.xml:7:9-65
 activity#com.qguxxi.synthvoice.MainActivity
@@ -197,7 +197,7 @@ ADDED from D:\qguxxi\github\project\app\src\main\AndroidManifest.xml:15:9-27:20
 	tools:ignore
 		ADDED from D:\qguxxi\github\project\app\src\main\AndroidManifest.xml:21:13-68
 	android:theme
-		ADDED from D:\qguxxi\github\project\app\src\main\AndroidManifest.xml:20:13-48
+		ADDED from D:\qguxxi\github\project\app\src\main\AndroidManifest.xml:20:13-55
 	android:name
 		ADDED from D:\qguxxi\github\project\app\src\main\AndroidManifest.xml:16:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
