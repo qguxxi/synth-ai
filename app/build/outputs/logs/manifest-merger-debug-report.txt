@@ -8,6 +8,7 @@ MERGED from [com.airbnb.android:lottie-compose:6.3.0] D:\caches\transforms-4\19d
 MERGED from [com.google.firebase:firebase-functions-ktx:21.0.0] D:\caches\transforms-4\830614d758c224367fdfa99689731364\transformed\firebase-functions-ktx-21.0.0\AndroidManifest.xml:2:1-18:12
 MERGED from [com.google.firebase:firebase-functions:21.0.0] D:\caches\transforms-4\68b9866efb0801fe9c0952723a856977\transformed\firebase-functions-21.0.0\AndroidManifest.xml:2:1-24:12
 MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] D:\caches\transforms-4\b1abd9813b3e2bdb85916c399ef39717\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:2:1-18:12
+MERGED from [androidx.core:core-splashscreen:1.0.0] D:\caches\transforms-4\7f9dbf2a799fa193a2ee5dd2ee80033f\transformed\core-splashscreen-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.navigation:navigation-common:2.8.0] D:\caches\transforms-4\e7114c1db1cf601b0bdb7b28318f1ef3\transformed\navigation-common-2.8.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-runtime:2.8.0] D:\caches\transforms-4\0ee24f770f9bf38eee61c6576a7f1601\transformed\navigation-runtime-2.8.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-common-ktx:2.8.0] D:\caches\transforms-4\0f38c30e66b6a21d18508f7001a98e1f\transformed\navigation-common-ktx-2.8.0\AndroidManifest.xml:2:1-7:12
@@ -183,7 +184,7 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] D:\caches\transforms-4\10c7
 	android:allowBackup
 		ADDED from D:\qguxxi\github\project\app\src\main\AndroidManifest.xml:6:9-35
 	android:theme
-		ADDED from D:\qguxxi\github\project\app\src\main\AndroidManifest.xml:13:9-51
+		ADDED from D:\qguxxi\github\project\app\src\main\AndroidManifest.xml:13:9-48
 	android:dataExtractionRules
 		ADDED from D:\qguxxi\github\project\app\src\main\AndroidManifest.xml:7:9-65
 activity#com.qguxxi.synthvoice.MainActivity
@@ -197,7 +198,7 @@ ADDED from D:\qguxxi\github\project\app\src\main\AndroidManifest.xml:15:9-27:20
 	tools:ignore
 		ADDED from D:\qguxxi\github\project\app\src\main\AndroidManifest.xml:21:13-68
 	android:theme
-		ADDED from D:\qguxxi\github\project\app\src\main\AndroidManifest.xml:20:13-55
+		ADDED from D:\qguxxi\github\project\app\src\main\AndroidManifest.xml:20:13-52
 	android:name
 		ADDED from D:\qguxxi\github\project\app\src\main\AndroidManifest.xml:16:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
@@ -254,6 +255,8 @@ MERGED from [com.google.firebase:firebase-functions:21.0.0] D:\caches\transforms
 MERGED from [com.google.firebase:firebase-functions:21.0.0] D:\caches\transforms-4\68b9866efb0801fe9c0952723a856977\transformed\firebase-functions-21.0.0\AndroidManifest.xml:6:5-44
 MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] D:\caches\transforms-4\b1abd9813b3e2bdb85916c399ef39717\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] D:\caches\transforms-4\b1abd9813b3e2bdb85916c399ef39717\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-splashscreen:1.0.0] D:\caches\transforms-4\7f9dbf2a799fa193a2ee5dd2ee80033f\transformed\core-splashscreen-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core-splashscreen:1.0.0] D:\caches\transforms-4\7f9dbf2a799fa193a2ee5dd2ee80033f\transformed\core-splashscreen-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.navigation:navigation-common:2.8.0] D:\caches\transforms-4\e7114c1db1cf601b0bdb7b28318f1ef3\transformed\navigation-common-2.8.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.navigation:navigation-common:2.8.0] D:\caches\transforms-4\e7114c1db1cf601b0bdb7b28318f1ef3\transformed\navigation-common-2.8.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.navigation:navigation-runtime:2.8.0] D:\caches\transforms-4\0ee24f770f9bf38eee61c6576a7f1601\transformed\navigation-runtime-2.8.0\AndroidManifest.xml:20:5-44

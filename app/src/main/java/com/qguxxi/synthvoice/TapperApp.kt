@@ -7,5 +7,5 @@ import com.qguxxi.synthvoice.navigation.TapperNavHost
 
 @Composable
 fun TapperApp(activity: Activity, context : Context) {
-    TapperNavHost(activity, context = context)
+    TapperNavHost(activity = activity, context = context)
 }

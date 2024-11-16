@@ -15,9 +15,11 @@ drawable camera
 drawable ellipse
 drawable folder
 drawable google
+drawable gradient
 drawable ic_launcher_background
-drawable logo_main
-drawable logo_transparent_background
+drawable icon_logo
+drawable logo
+drawable logo2
 drawable nfc
 drawable nfc_1
 drawable notification
@@ -58,6 +60,7 @@ string read_per
 string storage
 string terms_services
 string welcome
-style Theme.Tapper.Splash
+style Theme.App.NoActionBar
+style Theme.App.Splash
 xml backup_rules
 xml data_extraction_rules

@@ -274,6 +274,7 @@ attr popUpToSaveState
 attr popupMenuStyle
 attr popupTheme
 attr popupWindowStyle
+attr postSplashScreenTheme
 attr preserveIconSpacing
 attr progressBarPadding
 attr progressBarStyle
@@ -302,6 +303,7 @@ attr singleChoiceItemLayout
 attr spinBars
 attr spinnerDropDownItemStyle
 attr spinnerStyle
+attr splashScreenIconSize
 attr splitTrack
 attr srcCompat
 attr startDestination
@@ -372,6 +374,10 @@ attr windowFixedWidthMinor
 attr windowMinWidthMajor
 attr windowMinWidthMinor
 attr windowNoTitle
+attr windowSplashScreenAnimatedIcon
+attr windowSplashScreenAnimationDuration
+attr windowSplashScreenBackground
+attr windowSplashScreenIconBackgroundColor
 bool abc_action_bar_embed_tabs
 bool abc_config_actionMenuItemAllCaps
 color abc_background_cache_hint_selector_material_dark
@@ -595,6 +601,13 @@ dimen notification_small_icon_size_as_large
 dimen notification_subtext_size
 dimen notification_top_pad
 dimen notification_top_pad_large_text
+dimen splashscreen_icon_mask_size_no_background
+dimen splashscreen_icon_mask_size_with_background
+dimen splashscreen_icon_mask_stroke_no_background
+dimen splashscreen_icon_mask_stroke_with_background
+dimen splashscreen_icon_size
+dimen splashscreen_icon_size_no_background
+dimen splashscreen_icon_size_with_background
 dimen tooltip_corner_radius
 dimen tooltip_horizontal_padding
 dimen tooltip_margin
@@ -711,12 +724,15 @@ drawable common_google_signin_btn_text_light
 drawable common_google_signin_btn_text_light_focused
 drawable common_google_signin_btn_text_light_normal
 drawable common_google_signin_btn_text_light_normal_background
+drawable compat_splash_screen
+drawable compat_splash_screen_no_icon_background
 drawable ellipse
 drawable folder
 drawable google
 drawable google_logo
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable gradient
 drawable ic_call_answer
 drawable ic_call_answer_low
 drawable ic_call_answer_video
@@ -727,8 +743,10 @@ drawable ic_launcher_background
 drawable ic_other_sign_in
 drawable ic_passkey
 drawable ic_password
-drawable logo_main
-drawable logo_transparent_background
+drawable icon_background
+drawable icon_logo
+drawable logo
+drawable logo2
 drawable nfc
 drawable nfc_1
 drawable notification
@@ -913,6 +931,7 @@ id showTitle
 id software
 id spacer
 id special_effects_controller_view_tag
+id splashscreen_icon_view
 id split_action_bar
 id src_atop
 id src_in
@@ -961,6 +980,7 @@ integer abc_config_activityDefaultDur
 integer abc_config_activityShortDur
 integer cancel_button_image_alpha
 integer config_tooltipAnimTime
+integer default_icon_animation_duration
 integer google_play_services_version
 integer status_bar_notification_info_maxnum
 interpolator btn_checkbox_checked_mtrl_animation_interpolator_0
@@ -1010,6 +1030,7 @@ layout notification_template_part_time
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout splash_screen_view
 layout support_simple_spinner_dropdown_item
 mipmap ic_launcher
 mipmap ic_launcher_foreground
@@ -1255,6 +1276,9 @@ style Base_Theme_AppCompat_Light_Dialog_Alert
 style Base_Theme_AppCompat_Light_Dialog_FixedSize
 style Base_Theme_AppCompat_Light_Dialog_MinWidth
 style Base_Theme_AppCompat_Light_DialogWhenLarge
+style Base_Theme_SplashScreen
+style Base_Theme_SplashScreen_DayNight
+style Base_Theme_SplashScreen_Light
 style Base_ThemeOverlay_AppCompat
 style Base_ThemeOverlay_AppCompat_ActionBar
 style Base_ThemeOverlay_AppCompat_Dark
@@ -1342,6 +1366,10 @@ style Base_Widget_AppCompat_TextView
 style Base_Widget_AppCompat_TextView_SpinnerItem
 style Base_Widget_AppCompat_Toolbar
 style Base_Widget_AppCompat_Toolbar_Button_Navigation
+style Base_v21_Theme_SplashScreen
+style Base_v21_Theme_SplashScreen_Light
+style Base_v27_Theme_SplashScreen
+style Base_v27_Theme_SplashScreen_Light
 style DialogWindowTheme
 style FloatingDialogTheme
 style FloatingDialogWindowTheme
@@ -1428,6 +1456,8 @@ style TextAppearance_Compat_Notification_Title
 style TextAppearance_Widget_AppCompat_ExpandedMenu_Item
 style TextAppearance_Widget_AppCompat_Toolbar_Subtitle
 style TextAppearance_Widget_AppCompat_Toolbar_Title
+style Theme_App_NoActionBar
+style Theme_App_Splash
 style Theme_AppCompat
 style Theme_AppCompat_CompactMenu
 style Theme_AppCompat_DayNight
@@ -1451,7 +1481,9 @@ style Theme_AppCompat_Light_DialogWhenLarge
 style Theme_AppCompat_Light_NoActionBar
 style Theme_AppCompat_NoActionBar
 style Theme_Hidden
-style Theme_Tapper_Splash
+style Theme_SplashScreen
+style Theme_SplashScreen_Common
+style Theme_SplashScreen_IconBackground
 style ThemeOverlay_AppCompat
 style ThemeOverlay_AppCompat_ActionBar
 style ThemeOverlay_AppCompat_Dark

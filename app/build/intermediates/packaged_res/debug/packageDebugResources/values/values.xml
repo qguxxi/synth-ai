@@ -51,7 +51,20 @@
     <string name="storage">Read external storage Permission </string>
     <string name="terms_services">Terms of Service</string>
     <string name="welcome">Welcome to</string>
-    <style name="Theme.Tapper.Splash" parent="Theme.AppCompat">
+    <style name="Theme.App.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
         
+    </style>
+    <style name="Theme.App.Splash" parent="Theme.SplashScreen">
+        
+        <item name="windowSplashScreenBackground">@color/white</item>
+
+        
+        <item name="windowSplashScreenAnimatedIcon">@drawable/icon_logo</item>
+
+        
+        <item name="windowSplashScreenAnimationDuration">200</item>
+
+        
+        <item name="postSplashScreenTheme">@style/Theme.App.NoActionBar</item>
     </style>
 </resources>

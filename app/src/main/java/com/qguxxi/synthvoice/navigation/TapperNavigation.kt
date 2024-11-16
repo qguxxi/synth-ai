@@ -15,12 +15,10 @@ import com.qguxxi.synthvoice.ui.screen.permission.NotificationPerScreen
 import com.qguxxi.synthvoice.ui.screen.permission.PreHomeScreen
 import com.qguxxi.synthvoice.ui.screen.permission.ReadExternalScreen
 import com.qguxxi.synthvoice.ui.screen.signin.SignInScreen
-import com.qguxxi.synthvoice.ui.screen.splash.SplashScreen
 
 
 enum class Screen {
     HOME,
-    SPLASH,
     SIGNIN,
     PREHOME,
     CAMERAPER,
@@ -35,10 +33,7 @@ fun TapperNavHost(
     navController: NavHostController = rememberNavController(),
     context : Context
 ) {
-    NavHost(navController = navController, startDestination = Screen.SPLASH.name) {
-        composable(route = Screen.SPLASH.name) {
-            SplashScreen(navController = navController)
-        }
+    NavHost(navController = navController, startDestination = Screen.SIGNIN.name) {
         composable(route = Screen.SIGNIN.name) {
             SignInScreen(navController,context)
         }
