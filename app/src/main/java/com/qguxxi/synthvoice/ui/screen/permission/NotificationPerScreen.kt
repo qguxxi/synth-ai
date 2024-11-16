@@ -11,6 +11,9 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -40,6 +43,7 @@ fun NotificationPerScreen(
         modifier = modifier
             .fillMaxSize()
     ) {
+        var isAnimationPlaying by remember { mutableStateOf(true) }
         val composition by rememberLottieComposition(spec = LottieCompositionSpec.RawRes(R.raw.gradient))
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
@@ -51,7 +55,7 @@ fun NotificationPerScreen(
                 LottieAnimation(
                     composition = composition,
                     speed = 1f,
-                    iterations = LottieConstants.IterateForever
+                    iterations = if (isAnimationPlaying) 3 else 0
                 )
             }
             Spacer(modifier = Modifier.weight(5f))

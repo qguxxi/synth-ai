@@ -50,8 +50,6 @@ fun SignInScreen(
 
     var isAnimationPlaying by remember { mutableStateOf(true) }
 
-    val authenticated = remember { mutableStateOf(false) }
-
     val state = rememberOneTapSignInState()
 
     OneTapSignInWithGoogle(
@@ -59,21 +57,17 @@ fun SignInScreen(
         clientId = "530061469984-tdkskmiae9u7i51i88l80hogja4b2sc0.apps.googleusercontent.com",
         onTokenIdReceived = { tokenId ->
             Log.d("LOG", tokenId)
-            authenticated.value = true
-
+            navController.navigate(Screen.NOTIFICATION.name) {
+                popUpTo(Screen.SIGNIN.name) {
+                    inclusive = true
+                }
+            }
         },
         onDialogDismissed = { message ->
             Log.d("LOG", message)
         }
     )
 
-    if (authenticated.value) {
-        navController.navigate(Screen.NOTIFICATION.name) {
-            popUpTo(Screen.SIGNIN.name) {
-                inclusive = true
-            }
-        }
-    }
 
 
     Column(
@@ -88,7 +82,7 @@ fun SignInScreen(
             LottieAnimation(
                 composition = composition,
                 speed = 2.5f,
-                iterations = if (isAnimationPlaying) LottieConstants.IterateForever else 0
+                iterations = if (isAnimationPlaying) 3  else 0
             )
         }
 
