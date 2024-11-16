@@ -17,6 +17,7 @@ import com.qguxxi.synthvoice.ui.screen.permission.ReadExternalScreen
 import com.qguxxi.synthvoice.ui.screen.signin.SignInScreen
 import com.qguxxi.synthvoice.ui.screen.splash.SplashScreen
 
+
 enum class Screen {
     HOME,
     SPLASH,
@@ -34,14 +35,12 @@ fun TapperNavHost(
     navController: NavHostController = rememberNavController(),
     context : Context
 ) {
-    // Khởi tạo ViewModel ở đây để sử dụng lại
-
     NavHost(navController = navController, startDestination = Screen.SPLASH.name) {
         composable(route = Screen.SPLASH.name) {
             SplashScreen(navController = navController)
         }
         composable(route = Screen.SIGNIN.name) {
-            SignInScreen(navController)
+            SignInScreen(navController,context)
         }
         composable(route = Screen.HOME.name) {
             HomeScreen()

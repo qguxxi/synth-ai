@@ -1,10 +1,15 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     id("com.google.gms.google-services")
 }
 
+
 android {
+
+
 
     namespace = "com.qguxxi.synthvoice"
     compileSdk = 34
@@ -15,6 +20,8 @@ android {
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
+        // Thêm API key vào BuildConfig
+
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {

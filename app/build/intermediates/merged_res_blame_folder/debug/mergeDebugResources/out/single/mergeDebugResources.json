@@ -1,0 +1,138 @@
+[
+    {
+        "merged": "com.qguxxi.synthvoice.app-debug-69:/drawable_setting.xml.flat",
+        "source": "com.qguxxi.synthvoice.app-main-71:/drawable/setting.xml"
+    },
+    {
+        "merged": "com.qguxxi.synthvoice.app-debug-69:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.qguxxi.synthvoice.app-main-71:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.qguxxi.synthvoice.app-debug-69:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.qguxxi.synthvoice.app-main-71:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.qguxxi.synthvoice.app-debug-69:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.qguxxi.synthvoice.app-main-71:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.qguxxi.synthvoice.app-debug-69:/xml_backup_rules.xml.flat",
+        "source": "com.qguxxi.synthvoice.app-main-71:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.qguxxi.synthvoice.app-debug-69:/drawable_nfc_1.xml.flat",
+        "source": "com.qguxxi.synthvoice.app-main-71:/drawable/nfc_1.xml"
+    },
+    {
+        "merged": "com.qguxxi.synthvoice.app-debug-69:/mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.qguxxi.synthvoice.app-main-71:/mipmap-xxxhdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "com.qguxxi.synthvoice.app-debug-69:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.qguxxi.synthvoice.app-main-71:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.qguxxi.synthvoice.app-debug-69:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.qguxxi.synthvoice.app-main-71:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.qguxxi.synthvoice.app-debug-69:/drawable_audio_record.xml.flat",
+        "source": "com.qguxxi.synthvoice.app-main-71:/drawable/audio_record.xml"
+    },
+    {
+        "merged": "com.qguxxi.synthvoice.app-debug-69:/mipmap-mdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.qguxxi.synthvoice.app-main-71:/mipmap-mdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "com.qguxxi.synthvoice.app-debug-69:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.qguxxi.synthvoice.app-main-71:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.qguxxi.synthvoice.app-debug-69:/raw_record.json.flat",
+        "source": "com.qguxxi.synthvoice.app-main-71:/raw/record.json"
+    },
+    {
+        "merged": "com.qguxxi.synthvoice.app-debug-69:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.qguxxi.synthvoice.app-main-71:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.qguxxi.synthvoice.app-debug-69:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.qguxxi.synthvoice.app-main-71:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.qguxxi.synthvoice.app-debug-69:/mipmap-hdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.qguxxi.synthvoice.app-main-71:/mipmap-hdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "com.qguxxi.synthvoice.app-debug-69:/drawable_scanner.xml.flat",
+        "source": "com.qguxxi.synthvoice.app-main-71:/drawable/scanner.xml"
+    },
+    {
+        "merged": "com.qguxxi.synthvoice.app-debug-69:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.qguxxi.synthvoice.app-main-71:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.qguxxi.synthvoice.app-debug-69:/drawable_nfc.xml.flat",
+        "source": "com.qguxxi.synthvoice.app-main-71:/drawable/nfc.xml"
+    },
+    {
+        "merged": "com.qguxxi.synthvoice.app-debug-69:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.qguxxi.synthvoice.app-main-71:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.qguxxi.synthvoice.app-debug-69:/raw_gradient.json.flat",
+        "source": "com.qguxxi.synthvoice.app-main-71:/raw/gradient.json"
+    },
+    {
+        "merged": "com.qguxxi.synthvoice.app-debug-69:/drawable_logo_main.xml.flat",
+        "source": "com.qguxxi.synthvoice.app-main-71:/drawable/logo_main.xml"
+    },
+    {
+        "merged": "com.qguxxi.synthvoice.app-debug-69:/drawable_notification.xml.flat",
+        "source": "com.qguxxi.synthvoice.app-main-71:/drawable/notification.xml"
+    },
+    {
+        "merged": "com.qguxxi.synthvoice.app-debug-69:/drawable_folder.xml.flat",
+        "source": "com.qguxxi.synthvoice.app-main-71:/drawable/folder.xml"
+    },
+    {
+        "merged": "com.qguxxi.synthvoice.app-debug-69:/drawable_google.xml.flat",
+        "source": "com.qguxxi.synthvoice.app-main-71:/drawable/google.xml"
+    },
+    {
+        "merged": "com.qguxxi.synthvoice.app-debug-69:/mipmap-xxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.qguxxi.synthvoice.app-main-71:/mipmap-xxhdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "com.qguxxi.synthvoice.app-debug-69:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.qguxxi.synthvoice.app-main-71:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.qguxxi.synthvoice.app-debug-69:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.qguxxi.synthvoice.app-main-71:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.qguxxi.synthvoice.app-debug-69:/drawable_logo_transparent_background.png.flat",
+        "source": "com.qguxxi.synthvoice.app-main-71:/drawable/logo_transparent_background.png"
+    },
+    {
+        "merged": "com.qguxxi.synthvoice.app-debug-69:/xml_data_extraction_rules.xml.flat",
+        "source": "com.qguxxi.synthvoice.app-main-71:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.qguxxi.synthvoice.app-debug-69:/drawable_camera.xml.flat",
+        "source": "com.qguxxi.synthvoice.app-main-71:/drawable/camera.xml"
+    },
+    {
+        "merged": "com.qguxxi.synthvoice.app-debug-69:/drawable_ellipse.xml.flat",
+        "source": "com.qguxxi.synthvoice.app-main-71:/drawable/ellipse.xml"
+    },
+    {
+        "merged": "com.qguxxi.synthvoice.app-debug-69:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.qguxxi.synthvoice.app-main-71:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.qguxxi.synthvoice.app-debug-69:/mipmap-xhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.qguxxi.synthvoice.app-main-71:/mipmap-xhdpi/ic_launcher_foreground.webp"
+    }
+]
