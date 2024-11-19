@@ -4,6 +4,8 @@ package com.qguxxi.synthvoice.ui.screen.signin
 
 import android.content.Context
 import android.util.Log
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -13,6 +15,8 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -22,6 +26,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import com.airbnb.lottie.compose.LottieAnimation
 import com.airbnb.lottie.compose.LottieCompositionSpec
@@ -40,7 +45,22 @@ import com.stevdzasan.onetap.rememberOneTapSignInState
 fun SignInScreen(
     navController : NavController,
     context : Context,
+    permissionViewModel: PermissionViewModel = viewModel()
 ) {
+    val permissionState by permissionViewModel.permissionGranted.collectAsState()
+    val launcher = rememberLauncherForActivityResult(
+        contract = ActivityResultContracts.RequestPermission()
+    ) { isGranted ->
+        permissionViewModel.checkPermission(isGranted)
+    }
+
+    LaunchedEffect(permissionState) {
+        if (permissionState) {
+            
+        }
+    }
+
+
     val composition by rememberLottieComposition(spec = LottieCompositionSpec.RawRes(R.raw.gradient))
 
     var isAnimationPlaying by remember { mutableStateOf(true) }
