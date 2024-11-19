@@ -15,6 +15,9 @@ import com.qguxxi.synthvoice.ui.screen.permission.NotificationPerScreen
 import com.qguxxi.synthvoice.ui.screen.permission.PreHomeScreen
 import com.qguxxi.synthvoice.ui.screen.permission.ReadExternalScreen
 import com.qguxxi.synthvoice.ui.screen.signin.SignInScreen
+import com.qguxxi.synthvoice.ui.screen.signin.SignInViewModel
+import com.qguxxi.synthvoice.untils.PermissionPreferences
+import com.qguxxi.synthvoice.untils.SignInPreferences
 
 
 enum class Screen {
@@ -35,7 +38,7 @@ fun TapperNavHost(
 ) {
     NavHost(navController = navController, startDestination = Screen.SIGNIN.name) {
         composable(route = Screen.SIGNIN.name) {
-            SignInScreen(navController,context)
+            SignInScreen(navController, signInViewModel = SignInViewModel(permissionPreferences = PermissionPreferences(context), signInPreferences = SignInPreferences(context)))
         }
         composable(route = Screen.HOME.name) {
             HomeScreen()

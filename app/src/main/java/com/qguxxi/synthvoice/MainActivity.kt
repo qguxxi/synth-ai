@@ -17,5 +17,7 @@ class MainActivity : ComponentActivity() {
             TapperApp(activity = this , context = this)
         }
     }
+
+
 }
 

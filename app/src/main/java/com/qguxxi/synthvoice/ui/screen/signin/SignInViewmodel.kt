@@ -1,20 +1,34 @@
 package com.qguxxi.synthvoice.ui.screen.signin
 
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.launch
+import com.qguxxi.synthvoice.untils.PermissionPreferences
+import com.qguxxi.synthvoice.untils.SignInPreferences
 
-class PermissionViewModel(
+class SignInViewModel(private val permissionPreferences: PermissionPreferences,private val signInPreferences : SignInPreferences) : ViewModel() {
 
-) : ViewModel() {
-    private val _permissionGranted = MutableStateFlow(false)
-    val permissionGranted: StateFlow<Boolean> = _permissionGranted
+    private val _permissionStatus = MutableLiveData<Boolean>()
+    val permissionStatus: LiveData<Boolean> get() = _permissionStatus
 
-    fun checkPermission(hasPermission: Boolean) {
-        viewModelScope.launch {
-            _permissionGranted.value = hasPermission
-        }
+
+    private val _signInStatus = MutableLiveData<Boolean>()
+    val signInStatus: LiveData<Boolean> get() = _permissionStatus
+
+    fun checkPermissionStatus() {
+        _permissionStatus.value = permissionPreferences.hasPermission()
+    }
+
+    fun setPermissionGranted() {
+        permissionPreferences.setPermissionGranted()
+    }
+
+    fun checkSignInStatus() {
+        _signInStatus.value = signInPreferences.hasSignIn()
+    }
+
+
+    fun setSignInGranted() {
+        signInPreferences.setSignIn()
     }
 }

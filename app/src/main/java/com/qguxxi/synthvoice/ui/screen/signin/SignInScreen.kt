@@ -1,11 +1,10 @@
-@file:Suppress("DEPRECATION" , "UNREACHABLE_CODE")
 
 package com.qguxxi.synthvoice.ui.screen.signin
 
-import android.content.Context
+import android.Manifest
+import android.app.Activity
+import android.content.pm.PackageManager
 import android.util.Log
-import androidx.activity.compose.rememberLauncherForActivityResult
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -16,17 +15,18 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.core.content.ContextCompat
 import androidx.navigation.NavController
 import com.airbnb.lottie.compose.LottieAnimation
 import com.airbnb.lottie.compose.LottieCompositionSpec
@@ -39,53 +39,67 @@ import com.qguxxi.synthvoice.ui.components.under.PrivacyPolicy
 import com.qguxxi.synthvoice.ui.theme.figmaTypography
 import com.stevdzasan.onetap.OneTapSignInWithGoogle
 import com.stevdzasan.onetap.rememberOneTapSignInState
+import java.lang.Thread.sleep
 
 
 @Composable
 fun SignInScreen(
     navController : NavController,
-    context : Context,
-    permissionViewModel: PermissionViewModel = viewModel()
+    signInViewModel : SignInViewModel
 ) {
-    val permissionState by permissionViewModel.permissionGranted.collectAsState()
-    val launcher = rememberLauncherForActivityResult(
-        contract = ActivityResultContracts.RequestPermission()
-    ) { isGranted ->
-        permissionViewModel.checkPermission(isGranted)
-    }
-
-    LaunchedEffect(permissionState) {
-        if (permissionState) {
-            
+    val context = LocalContext.current
+    val permissionStatus by signInViewModel.permissionStatus.observeAsState(false)
+    val signInStatus by signInViewModel.signInStatus.observeAsState(false)
+    val permissions = arrayOf(
+        Manifest.permission.RECORD_AUDIO, // Quyền ghi âm
+        Manifest.permission.CAMERA, // Quyền ghi âm
+        Manifest.permission.POST_NOTIFICATIONS, // Quyền ghi âm
+        Manifest.permission.READ_EXTERNAL_STORAGE, // Quyền ghi âm
+    )
+    // Kiểm tra quyền ngay khi khởi động
+    LaunchedEffect(Unit) {
+        if (permissions.all {
+                ContextCompat.checkSelfPermission(context, it) == PackageManager.PERMISSION_GRANTED
+            }) {
+            // Nếu tất cả quyền đã được cấp
+            signInViewModel.setPermissionGranted()
         }
     }
-
-
     val composition by rememberLottieComposition(spec = LottieCompositionSpec.RawRes(R.raw.gradient))
 
-    var isAnimationPlaying by remember { mutableStateOf(true) }
+    val isAnimationPlaying by remember { mutableStateOf(true) }
 
     val state = rememberOneTapSignInState()
 
     val apiKey = BuildConfig.API_KEY
 
+
     OneTapSignInWithGoogle(
         state = state,
         clientId = apiKey,
         onTokenIdReceived = { tokenId ->
-            Log.d("LOG", tokenId)
-            navController.navigate(navController.navigate(Screen.NOTIFICATION.name)) {
-                popUpTo(Screen.SIGNIN.name) {
-                    inclusive = true
+            signInViewModel.setSignInGranted()
+            signInViewModel.setSignInGranted()
+            signInViewModel.checkPermissionStatus()
+            if (permissionStatus) {
+                navController.navigate(navController.navigate(Screen.HOME.name)) {
+                    popUpTo(Screen.SIGNIN.name) {
+                        inclusive = true
+                    }
+                }
+            } else {
+                navController.navigate(Screen.NOTIFICATION.name) {
+                    popUpTo(Screen.SIGNIN.name) {
+                        inclusive = true
+                    }
                 }
             }
+            Log.d("LOG", tokenId)
         },
         onDialogDismissed = { message ->
             Log.d("LOG", message)
         }
     )
-
-
 
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -115,8 +129,10 @@ fun SignInScreen(
 
         Spacer(modifier = Modifier.weight(2f))
 
-        GoogleButton(onClick = { state.open() })
-
+        GoogleButton(onClick = {
+            state.open()
+        }
+        )
         PrivacyPolicy(
             privacyOnClick = { /* Handle Privacy Policy */ },
             termServiceOnClick = { /* Handle Terms of Service */ },
