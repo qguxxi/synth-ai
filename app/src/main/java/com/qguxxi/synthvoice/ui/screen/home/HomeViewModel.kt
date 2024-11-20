@@ -11,8 +11,8 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
 class AIViewModel : ViewModel() {
-    var question: String = ""
-    var answer: String = ""
+    private var question: String = ""
+    private var answer: String = ""
 
     fun sendToOpenAI(userQuestion: String, onResult: (String) -> Unit, onError: (String) -> Unit) {
         question = userQuestion
