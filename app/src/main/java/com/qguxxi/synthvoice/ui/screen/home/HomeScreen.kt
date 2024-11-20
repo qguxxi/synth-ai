@@ -34,7 +34,7 @@ import com.qguxxi.synthvoice.untils.TextToSpeechManager
 fun HomeScreen(
     viewModel: AIViewModel = androidx.lifecycle.viewmodel.compose.viewModel(),
     context : Context
-               ) {
+) {
 
     var userQuestion by remember { mutableStateOf("") }
     var aiAnswer by remember { mutableStateOf("") }
