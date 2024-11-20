@@ -35,6 +35,7 @@ android {
         // Thêm API key vào BuildConfig
         // Thêm API key vào BuildConfig
         buildConfigField("String", "API_KEY", "\"$apiKey\"")
+        buildConfigField("String", "OPEN_AI_API_KEY", "\"$apiKey\"")
 
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -77,12 +78,17 @@ dependencies {
 
 
     dependencies {
+
+        implementation ("com.squareup.retrofit2:retrofit:2.11.0")
+        implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+        implementation ("com.google.code.gson:gson:2.10")
         // Animation
         implementation("androidx.compose.animation:animation:1.4.3")
 //      Splash Screen
         implementation ("androidx.core:core-splashscreen:1.0.0")
+        implementation ("androidx.datastore:datastore-preferences:1.0.0")
 
-
+        implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")
 
         // Lottie File
         implementation("com.airbnb.android:lottie-compose:6.3.0")

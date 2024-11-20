@@ -38,10 +38,11 @@ fun TapperNavHost(
 ) {
     NavHost(navController = navController, startDestination = Screen.SIGNIN.name) {
         composable(route = Screen.SIGNIN.name) {
-            SignInScreen(navController, signInViewModel = SignInViewModel(permissionPreferences = PermissionPreferences(context), signInPreferences = SignInPreferences(context)))
+            SignInScreen(navController, signInViewModel = SignInViewModel(permissionPreferences = PermissionPreferences(context))
+            )
         }
         composable(route = Screen.HOME.name) {
-            HomeScreen()
+            HomeScreen(context = context)
         }
         composable(route = Screen.READEXTERNAL.name) {
             ReadExternalScreen(navController, activity)

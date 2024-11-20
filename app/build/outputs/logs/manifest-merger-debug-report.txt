@@ -9,6 +9,7 @@ MERGED from [com.google.firebase:firebase-functions-ktx:21.0.0] D:\caches\transf
 MERGED from [com.google.firebase:firebase-functions:21.0.0] D:\caches\transforms-4\68b9866efb0801fe9c0952723a856977\transformed\firebase-functions-21.0.0\AndroidManifest.xml:2:1-24:12
 MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] D:\caches\transforms-4\b1abd9813b3e2bdb85916c399ef39717\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:2:1-18:12
 MERGED from [androidx.core:core-splashscreen:1.0.0] D:\caches\transforms-4\7f9dbf2a799fa193a2ee5dd2ee80033f\transformed\core-splashscreen-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.datastore:datastore-preferences:1.0.0] D:\caches\transforms-4\b54b35a158c5ac77baf514f1b4e4df76\transformed\datastore-preferences-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.navigation:navigation-common:2.8.0] D:\caches\transforms-4\e7114c1db1cf601b0bdb7b28318f1ef3\transformed\navigation-common-2.8.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-runtime:2.8.0] D:\caches\transforms-4\0ee24f770f9bf38eee61c6576a7f1601\transformed\navigation-runtime-2.8.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-common-ktx:2.8.0] D:\caches\transforms-4\0f38c30e66b6a21d18508f7001a98e1f\transformed\navigation-common-ktx-2.8.0\AndroidManifest.xml:2:1-7:12
@@ -82,6 +83,7 @@ MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.6] D:\caches\
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.8.6] D:\caches\transforms-4\6c0128d497cf2e1c6f3bfb8abed2fafa\transformed\lifecycle-livedata-core-2.8.6\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.8.6] D:\caches\transforms-4\0519237a843766ae262dce02e4e6a501\transformed\lifecycle-livedata-2.8.6\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.6] D:\caches\transforms-4\d875124eb687dc093c0e8b57c8d45955\transformed\lifecycle-runtime-ktx-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.datastore:datastore:1.0.0] D:\caches\transforms-4\b0ea2a89b187e4ee27f9a1cb3ba4aef8\transformed\datastore-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-tasks:18.1.0] D:\caches\transforms-4\502ea84dde0ff319de51b8968699cec2\transformed\play-services-tasks-18.1.0\AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.android.gms:play-services-basement:18.3.0] D:\caches\transforms-4\3252670e6f32ff1f742a9273c52a7f47\transformed\play-services-basement-18.3.0\AndroidManifest.xml:16:1-26:12
 MERGED from [androidx.fragment:fragment:1.5.7] D:\caches\transforms-4\0200a467bc895d2faa27d941e51a9d67\transformed\fragment-1.5.7\AndroidManifest.xml:17:1-24:12
@@ -257,6 +259,8 @@ MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] D:\caches\transform
 MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] D:\caches\transforms-4\b1abd9813b3e2bdb85916c399ef39717\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:5:5-44
 MERGED from [androidx.core:core-splashscreen:1.0.0] D:\caches\transforms-4\7f9dbf2a799fa193a2ee5dd2ee80033f\transformed\core-splashscreen-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.core:core-splashscreen:1.0.0] D:\caches\transforms-4\7f9dbf2a799fa193a2ee5dd2ee80033f\transformed\core-splashscreen-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.datastore:datastore-preferences:1.0.0] D:\caches\transforms-4\b54b35a158c5ac77baf514f1b4e4df76\transformed\datastore-preferences-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.datastore:datastore-preferences:1.0.0] D:\caches\transforms-4\b54b35a158c5ac77baf514f1b4e4df76\transformed\datastore-preferences-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.navigation:navigation-common:2.8.0] D:\caches\transforms-4\e7114c1db1cf601b0bdb7b28318f1ef3\transformed\navigation-common-2.8.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.navigation:navigation-common:2.8.0] D:\caches\transforms-4\e7114c1db1cf601b0bdb7b28318f1ef3\transformed\navigation-common-2.8.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.navigation:navigation-runtime:2.8.0] D:\caches\transforms-4\0ee24f770f9bf38eee61c6576a7f1601\transformed\navigation-runtime-2.8.0\AndroidManifest.xml:20:5-44
@@ -403,6 +407,8 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.8.6] D:\caches\transforms-4
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.8.6] D:\caches\transforms-4\0519237a843766ae262dce02e4e6a501\transformed\lifecycle-livedata-2.8.6\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.6] D:\caches\transforms-4\d875124eb687dc093c0e8b57c8d45955\transformed\lifecycle-runtime-ktx-release\AndroidManifest.xml:5:5-44
 MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.6] D:\caches\transforms-4\d875124eb687dc093c0e8b57c8d45955\transformed\lifecycle-runtime-ktx-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.datastore:datastore:1.0.0] D:\caches\transforms-4\b0ea2a89b187e4ee27f9a1cb3ba4aef8\transformed\datastore-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.datastore:datastore:1.0.0] D:\caches\transforms-4\b0ea2a89b187e4ee27f9a1cb3ba4aef8\transformed\datastore-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.gms:play-services-tasks:18.1.0] D:\caches\transforms-4\502ea84dde0ff319de51b8968699cec2\transformed\play-services-tasks-18.1.0\AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-tasks:18.1.0] D:\caches\transforms-4\502ea84dde0ff319de51b8968699cec2\transformed\play-services-tasks-18.1.0\AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-basement:18.3.0] D:\caches\transforms-4\3252670e6f32ff1f742a9273c52a7f47\transformed\play-services-basement-18.3.0\AndroidManifest.xml:18:5-43

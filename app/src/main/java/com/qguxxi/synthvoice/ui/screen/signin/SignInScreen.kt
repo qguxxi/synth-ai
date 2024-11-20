@@ -15,6 +15,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.runtime.mutableStateOf
@@ -49,7 +50,6 @@ fun SignInScreen(
 ) {
     val context = LocalContext.current
     val permissionStatus by signInViewModel.permissionStatus.observeAsState(false)
-    val signInStatus by signInViewModel.signInStatus.observeAsState(false)
     val permissions = arrayOf(
         Manifest.permission.RECORD_AUDIO, // Quyền ghi âm
         Manifest.permission.CAMERA, // Quyền ghi âm
@@ -57,7 +57,7 @@ fun SignInScreen(
         Manifest.permission.READ_EXTERNAL_STORAGE, // Quyền ghi âm
     )
     // Kiểm tra quyền ngay khi khởi động
-    LaunchedEffect(Unit) {
+    LaunchedEffect( permissionStatus) {
         if (permissions.all {
                 ContextCompat.checkSelfPermission(context, it) == PackageManager.PERMISSION_GRANTED
             }) {
@@ -78,8 +78,6 @@ fun SignInScreen(
         state = state,
         clientId = apiKey,
         onTokenIdReceived = { tokenId ->
-            signInViewModel.setSignInGranted()
-            signInViewModel.setSignInGranted()
             signInViewModel.checkPermissionStatus()
             if (permissionStatus) {
                 navController.navigate(navController.navigate(Screen.HOME.name)) {
@@ -131,7 +129,7 @@ fun SignInScreen(
 
         GoogleButton(onClick = {
             state.open()
-        }
+         }
         )
         PrivacyPolicy(
             privacyOnClick = { /* Handle Privacy Policy */ },
