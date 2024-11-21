@@ -3,13 +3,13 @@
     <!-- Theme dành cho Splash Screen -->
     <style name="Theme.App.Splash" parent="Theme.SplashScreen">
         <!-- Màu nền của Splash Screen -->
-        <item name="windowSplashScreenBackground">@color/white</item>
+        <item name="windowSplashScreenBackground">@color/black</item>
 
         <!-- Logo hoặc icon hiển thị trên Splash Screen -->
-        <item name="windowSplashScreenAnimatedIcon">@drawable/icon_logo</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
 
-        <!-- Thời gian chạy hoạt ảnh logo (200ms) -->
-        <item name="windowSplashScreenAnimationDuration">200</item>
+        <!-- Thời gian chạy hoạt ảnh logo (100ms) -->
+        <item name="windowSplashScreenAnimationDuration">100</item>
 
         <!-- Theme được sử dụng sau Splash Screen -->
         <item name="postSplashScreenTheme">@style/Theme.App.NoActionBar</item>

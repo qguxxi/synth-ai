@@ -32,7 +32,6 @@ import com.qguxxi.synthvoice.untils.TextToSpeechManager
 
 @Composable
 fun HomeScreen(
-    viewModel: AIViewModel = androidx.lifecycle.viewmodel.compose.viewModel(),
     context : Context
 ) {
 
@@ -75,21 +74,7 @@ fun HomeScreen(
         Spacer(modifier = Modifier.weight(3f))
 
         Button(
-            onClick = {
-                isLoading = true
-                viewModel.sendToOpenAI(
-                    userQuestion,
-                    onResult = {
-                        aiAnswer = it
-                        TextToSpeechManager(context) // Đọc câu trả lời
-                        isLoading = false
-                    },
-                    onError = {
-                        aiAnswer = it
-                        isLoading = false
-                    }
-                )
-            }
+            onClick = {}
         ) {
             Text(text = "Gửi câu hỏi")
         }
