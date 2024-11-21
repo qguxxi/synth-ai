@@ -1,3 +1,4 @@
+com.qguxxi.synthvoice:drawable/ic_launcher_foreground = 0x7f080099
 com.qguxxi.synthvoice:style/TextAppearance.Compat.Notification.Time = 0x7f1100f9
 com.qguxxi.synthvoice:style/Base.V23.Theme.AppCompat = 0x7f11005b
 com.qguxxi.synthvoice:string/camera_per = 0x7f10002c
@@ -389,6 +390,7 @@ com.qguxxi.synthvoice:attr/listPreferredItemHeight = 0x7f0400b6
 com.qguxxi.synthvoice:style/Platform.ThemeOverlay.AppCompat.Dark = 0x7f1100ae
 com.qguxxi.synthvoice:style/Base.Theme.AppCompat.Light.DarkActionBar = 0x7f110044
 com.qguxxi.synthvoice:id/title = 0x7f0a00bd
+com.qguxxi.synthvoice:color/ic_launcher_background = 0x7f06006d
 com.qguxxi.synthvoice:color/material_blue_grey_800 = 0x7f060041
 com.qguxxi.synthvoice:string/camera = 0x7f10002b
 com.qguxxi.synthvoice:string/m3c_date_picker_switch_to_calendar_mode = 0x7f100063

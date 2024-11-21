@@ -444,6 +444,7 @@ int color foreground_material_dark 0x7f06003d
 int color foreground_material_light 0x7f06003e
 int color highlighted_text_material_dark 0x7f06003f
 int color highlighted_text_material_light 0x7f060040
+int color ic_launcher_background 0x7f06006d
 int color material_blue_grey_800 0x7f060041
 int color material_blue_grey_900 0x7f060042
 int color material_blue_grey_950 0x7f060043
@@ -739,6 +740,7 @@ int drawable ic_call_answer_video_low 0x7f080079
 int drawable ic_call_decline 0x7f08007a
 int drawable ic_call_decline_low 0x7f08007b
 int drawable ic_launcher_background 0x7f08007c
+int drawable ic_launcher_foreground 0x7f080099
 int drawable ic_other_sign_in 0x7f08007d
 int drawable ic_passkey 0x7f08007e
 int drawable ic_password 0x7f08007f
