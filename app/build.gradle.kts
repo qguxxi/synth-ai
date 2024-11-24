@@ -28,8 +28,8 @@ android {
 
     defaultConfig {
         applicationId = "com.qguxxi.synthvoice"
-        minSdk = 32
-        targetSdk = 34
+        minSdk = 33
+        targetSdk = 33
         versionCode = 1
         versionName = "1.0"
         // Thêm API key vào BuildConfig

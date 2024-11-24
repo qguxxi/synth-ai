@@ -35,11 +35,8 @@ fun HomeScreen(
     context : Context
 ) {
 
-    var userQuestion by remember { mutableStateOf("") }
-    var aiAnswer by remember { mutableStateOf("") }
     var isLoading by remember { mutableStateOf(false) }
     val composition1 by rememberLottieComposition(spec = LottieCompositionSpec.RawRes(R.raw.gradient))
-    val composition2 by rememberLottieComposition(spec = LottieCompositionSpec.RawRes(R.raw.record))
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier
