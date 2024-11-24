@@ -28,8 +28,8 @@ android {
 
     defaultConfig {
         applicationId = "com.qguxxi.synthvoice"
-        minSdk = 32
-        targetSdk = 34
+        minSdk = 33
+        targetSdk = 33
         versionCode = 1
         versionName = "1.0"
         // Thêm API key vào BuildConfig
@@ -79,30 +79,30 @@ dependencies {
 
     dependencies {
 
-        implementation ("com.squareup.retrofit2:retrofit:2.11.0")
-        implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
-        implementation ("com.google.code.gson:gson:2.10")
+        implementation (libs.retrofit)
+        implementation (libs.converter.gson)
+        implementation (libs.gson)
         // Animation
-        implementation("androidx.compose.animation:animation:1.4.3")
+        implementation(libs.androidx.animation)
 //      Splash Screen
-        implementation ("androidx.core:core-splashscreen:1.0.0")
-        implementation ("androidx.datastore:datastore-preferences:1.0.0")
+        implementation (libs.androidx.core.splashscreen)
+        implementation (libs.androidx.datastore.preferences)
 
-        implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")
+        implementation(libs.kotlinx.coroutines.android)
 
         // Lottie File
-        implementation("com.airbnb.android:lottie-compose:6.3.0")
+        implementation(libs.lottie.compose)
 
         implementation(libs.androidx.runtime.livedata)
         implementation(libs.firebase.functions.ktx)
 
 //        Google Auth
-        implementation ("com.google.android.gms:play-services-auth:21.2.0")
+        implementation (libs.play.services.auth)
 
-        val nav_version = "2.8.0"
+        val nav_version = "2.8.4"
         // Jetpack Compose integration
-        implementation("androidx.navigation:navigation-compose:$nav_version")
-        implementation("com.github.stevdza-san:OneTapCompose:1.0.14")
+        implementation(libs.androidx.navigation.compose)
+        implementation(libs.onetapcompose)
 
         implementation(libs.androidx.core.ktx)
         implementation(libs.androidx.lifecycle.runtime.ktx)
