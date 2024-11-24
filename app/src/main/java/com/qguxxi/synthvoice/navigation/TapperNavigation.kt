@@ -8,6 +8,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.qguxxi.synthvoice.data.source.local.UserSharePreference
 import com.qguxxi.synthvoice.ui.screen.home.HomeScreen
 import com.qguxxi.synthvoice.ui.screen.permission.AudioRecordScreen
 import com.qguxxi.synthvoice.ui.screen.permission.CameraPerScreen
@@ -38,7 +39,11 @@ fun TapperNavHost(
 ) {
     NavHost(navController = navController, startDestination = Screen.SIGNIN.name) {
         composable(route = Screen.SIGNIN.name) {
-            SignInScreen(navController, signInViewModel = SignInViewModel(permissionPreferences = PermissionPreferences(context))
+            SignInScreen(
+                navController,
+                signInViewModel = SignInViewModel(permissionPreferences = PermissionPreferences(context),
+                userPreferences = UserSharePreference(context)
+                    )
             )
         }
         composable(route = Screen.HOME.name) {

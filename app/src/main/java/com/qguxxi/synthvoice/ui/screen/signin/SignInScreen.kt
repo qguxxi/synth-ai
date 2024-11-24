@@ -5,7 +5,6 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.util.Log
-import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -59,15 +58,18 @@ fun SignInScreen(
         Manifest.permission.READ_EXTERNAL_STORAGE , // Quyền ghi âm
     )
     // Kiểm tra quyền ngay khi khởi động
-    LaunchedEffect(permissionStatus) {
+    LaunchedEffect(Unit) {
+        if (signInViewModel.isLoggedIn()) {
+            navController.navigate(Screen.HOME.name) {
+                popUpTo(Screen.SIGNIN.name) { inclusive = true }
+            }
+        }
         if (permissions.all {
-                ContextCompat.checkSelfPermission(context , it) == PackageManager.PERMISSION_GRANTED
+                ContextCompat.checkSelfPermission(context, it) == PackageManager.PERMISSION_GRANTED
             }) {
-            // Nếu tất cả quyền đã được cấp
             signInViewModel.setPermissionGranted()
         }
     }
-
     val state = rememberOneTapSignInState()
 
     val apiKey = BuildConfig.API_KEY
@@ -77,9 +79,10 @@ fun SignInScreen(
         state = state ,
         clientId = apiKey ,
         onTokenIdReceived = { tokenId ->
+            signInViewModel.saveLoginToken(tokenId)
             signInViewModel.checkPermissionStatus()
             if (permissionStatus) {
-                navController.navigate(navController.navigate(Screen.HOME.name)) {
+                navController.navigate(Screen.HOME.name) {
                     popUpTo(Screen.SIGNIN.name) {
                         inclusive = true
                     }
@@ -153,5 +156,4 @@ fun SignInScreen(
 @Preview
 @Composable
 private fun SignInPreview() {
-    SignInScreen(navController = rememberNavController() , signInViewModel = SignInViewModel(PermissionPreferences(LocalContext.current)))
 }
