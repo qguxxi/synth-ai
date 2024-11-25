@@ -28,8 +28,8 @@ android {
 
     defaultConfig {
         applicationId = "com.qguxxi.synthvoice"
-        minSdk = 32
-        targetSdk = 34
+        minSdk = 33
+        targetSdk = 33
         versionCode = 1
         versionName = "1.0"
         // Thêm API key vào BuildConfig
@@ -82,6 +82,7 @@ dependencies {
         implementation (libs.retrofit)
         implementation (libs.converter.gson)
         implementation (libs.gson)
+        implementation(libs.okhttp)
         // Animation
         implementation(libs.androidx.animation)
 //      Splash Screen
@@ -99,7 +100,7 @@ dependencies {
 //        Google Auth
         implementation (libs.play.services.auth)
 
-        val nav_version = "2.8.4"
+
         // Jetpack Compose integration
         implementation(libs.androidx.navigation.compose)
         implementation(libs.onetapcompose)
