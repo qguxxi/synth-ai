@@ -34,8 +34,8 @@ android {
         versionName = "1.0"
         // Thêm API key vào BuildConfig
         // Thêm API key vào BuildConfig
-        buildConfigField("String", "API_KEY", "\"$apiKey\"")
-        buildConfigField("String", "OPEN_AI_API_KEY", "\"$apiKey\"")
+        buildConfigField("String" , "API_KEY" , "\"$apiKey\"")
+        buildConfigField("String" , "OPEN_AI_API_KEY" , "\"$apiKey\"")
 
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -48,7 +48,7 @@ android {
         release {
             isMinifyEnabled = false
             proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
+                getDefaultProguardFile("proguard-android-optimize.txt") ,
                 "proguard-rules.pro"
             )
         }
@@ -76,61 +76,58 @@ android {
 dependencies {
 
 
-
     implementation(libs.androidx.room.common)
     implementation(libs.androidx.room.ktx)
-    dependencies {
-        // Testing
-        androidTestImplementation(libs.androidx.espresso.core)
-        androidTestImplementation(libs.androidx.junit.v115)
+    // Testing
+    androidTestImplementation(libs.androidx.espresso.core)
+    androidTestImplementation(libs.androidx.junit.v115)
 
-        implementation (libs.retrofit)
-        implementation (libs.converter.gson)
-        implementation (libs.gson)
-        implementation(libs.okhttp)
-        // Animation
-        implementation(libs.androidx.animation)
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+    implementation(libs.gson)
+    implementation(libs.okhttp)
+    // Animation
+    implementation(libs.androidx.animation)
 //      Splash Screen
-        implementation (libs.androidx.core.splashscreen)
-        implementation (libs.androidx.datastore.preferences)
+    implementation(libs.androidx.core.splashscreen)
+    implementation(libs.androidx.datastore.preferences)
 
-        implementation(libs.kotlinx.coroutines.android)
+    implementation(libs.kotlinx.coroutines.android)
 
-        // Lottie File
-        implementation(libs.lottie.compose)
+    // Lottie File
+    implementation(libs.lottie.compose)
 
-        implementation(libs.androidx.runtime.livedata)
-        implementation(libs.firebase.functions.ktx)
+    implementation(libs.androidx.runtime.livedata)
+    implementation(libs.firebase.functions.ktx)
 
 //        Google Auth
-        implementation (libs.play.services.auth)
+    implementation(libs.play.services.auth)
 
 
-        // Jetpack Compose integration
-        implementation(libs.androidx.navigation.compose)
-        implementation(libs.onetapcompose)
+    // Jetpack Compose integration
+    implementation(libs.androidx.navigation.compose)
+    implementation(libs.onetapcompose)
 
-        implementation(libs.androidx.core.ktx)
-        implementation(libs.androidx.lifecycle.runtime.ktx)
-        implementation(libs.androidx.activity.compose)
-        implementation(platform(libs.androidx.compose.bom))
-        implementation(libs.androidx.ui)
-        implementation(libs.androidx.ui.graphics)
-        implementation(libs.androidx.ui.tooling.preview)
-        implementation(libs.androidx.material3)
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.androidx.activity.compose)
+    implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.androidx.ui)
+    implementation(libs.androidx.ui.graphics)
+    implementation(libs.androidx.ui.tooling.preview)
+    implementation(libs.androidx.material3)
 
-        implementation(libs.androidx.ui.text.google.fonts)
+    implementation(libs.androidx.ui.text.google.fonts)
 
-        // Testing dependencies
-        testImplementation(libs.junit)
-        androidTestImplementation(libs.androidx.junit)
-        androidTestImplementation(libs.androidx.espresso.core)
-        androidTestImplementation(platform(libs.androidx.compose.bom))
-        androidTestImplementation(libs.androidx.ui.test.junit4)
+    // Testing dependencies
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
+    androidTestImplementation(platform(libs.androidx.compose.bom))
+    androidTestImplementation(libs.androidx.ui.test.junit4)
 
-        // Debugging dependencies
-        debugImplementation(libs.androidx.ui.tooling)
-        debugImplementation(libs.androidx.ui.test.manifest)
-    }
+    // Debugging dependencies
+    debugImplementation(libs.androidx.ui.tooling)
+    debugImplementation(libs.androidx.ui.test.manifest)
 
 }
