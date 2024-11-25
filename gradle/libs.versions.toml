@@ -24,6 +24,8 @@ retrofit = "2.11.0"
 uiTextGoogleFonts = "1.7.4"
 runtimeLivedata = "1.7.4"
 firebaseFunctionsKtx = "21.0.0"
+roomCommon = "2.6.1"
+roomKtx = "2.6.1"
 
 [libraries]
 androidx-animation = { module = "androidx.compose.animation:animation", version.ref = "animation" }
@@ -56,6 +58,8 @@ onetapcompose = { module = "com.github.stevdza-san:OneTapCompose", version.ref =
 play-services-auth = { module = "com.google.android.gms:play-services-auth", version.ref = "playServicesAuth" }
 play-services-speech = { module = "com.google.android.gms:play-services-speech", version.ref = "playServicesSpeech" }
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+androidx-room-common = { group = "androidx.room", name = "room-common", version.ref = "roomCommon" }
+androidx-room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "roomKtx" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
