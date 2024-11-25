@@ -38,7 +38,6 @@ object CameraPermission {
                         inclusive = true
                     }
                 }
-
             }
         } else {
             // Trường hợp không cần quyền trên Android < 13

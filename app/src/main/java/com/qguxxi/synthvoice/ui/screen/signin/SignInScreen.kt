@@ -5,7 +5,6 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.util.Log
-import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -32,14 +31,12 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.core.content.ContextCompat
 import androidx.navigation.NavController
-import androidx.navigation.compose.rememberNavController
 import com.qguxxi.synthvoice.BuildConfig
 import com.qguxxi.synthvoice.R
 import com.qguxxi.synthvoice.navigation.Screen
 import com.qguxxi.synthvoice.ui.components.button.GoogleButton
 import com.qguxxi.synthvoice.ui.components.under.PrivacyPolicy
 import com.qguxxi.synthvoice.ui.theme.figmaTypography
-import com.qguxxi.synthvoice.untils.PermissionPreferences
 import com.stevdzasan.onetap.OneTapSignInWithGoogle
 import com.stevdzasan.onetap.rememberOneTapSignInState
 
@@ -59,15 +56,18 @@ fun SignInScreen(
         Manifest.permission.READ_EXTERNAL_STORAGE , // Quyền ghi âm
     )
     // Kiểm tra quyền ngay khi khởi động
-    LaunchedEffect(permissionStatus) {
+    LaunchedEffect(Unit) {
+        if (signInViewModel.isLoggedIn()) {
+            navController.navigate(Screen.HOME.name) {
+                popUpTo(Screen.SIGNIN.name) { inclusive = true }
+            }
+        }
         if (permissions.all {
-                ContextCompat.checkSelfPermission(context , it) == PackageManager.PERMISSION_GRANTED
+                ContextCompat.checkSelfPermission(context, it) == PackageManager.PERMISSION_GRANTED
             }) {
-            // Nếu tất cả quyền đã được cấp
             signInViewModel.setPermissionGranted()
         }
     }
-
     val state = rememberOneTapSignInState()
 
     val apiKey = BuildConfig.API_KEY
@@ -77,9 +77,10 @@ fun SignInScreen(
         state = state ,
         clientId = apiKey ,
         onTokenIdReceived = { tokenId ->
+            signInViewModel.saveLoginToken(tokenId)
             signInViewModel.checkPermissionStatus()
             if (permissionStatus) {
-                navController.navigate(navController.navigate(Screen.HOME.name)) {
+                navController.navigate(Screen.HOME.name) {
                     popUpTo(Screen.SIGNIN.name) {
                         inclusive = true
                     }
@@ -153,5 +154,4 @@ fun SignInScreen(
 @Preview
 @Composable
 private fun SignInPreview() {
-    SignInScreen(navController = rememberNavController() , signInViewModel = SignInViewModel(PermissionPreferences(LocalContext.current)))
 }
