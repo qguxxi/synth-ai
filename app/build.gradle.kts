@@ -28,7 +28,7 @@ android {
 
     defaultConfig {
         applicationId = "com.qguxxi.synthvoice"
-        minSdk = 33
+        minSdk = 34
         targetSdk = 33
         versionCode = 1
         versionName = "1.0"
@@ -81,8 +81,8 @@ dependencies {
     implementation(libs.androidx.room.ktx)
     dependencies {
         // Testing
-        androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-        androidTestImplementation("androidx.test.ext:junit:1.1.5")
+        androidTestImplementation(libs.androidx.espresso.core)
+        androidTestImplementation(libs.androidx.junit.v115)
 
         implementation (libs.retrofit)
         implementation (libs.converter.gson)
