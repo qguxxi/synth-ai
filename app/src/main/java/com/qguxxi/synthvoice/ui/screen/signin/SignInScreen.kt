@@ -31,14 +31,12 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.core.content.ContextCompat
 import androidx.navigation.NavController
-import androidx.navigation.compose.rememberNavController
 import com.qguxxi.synthvoice.BuildConfig
 import com.qguxxi.synthvoice.R
 import com.qguxxi.synthvoice.navigation.Screen
 import com.qguxxi.synthvoice.ui.components.button.GoogleButton
 import com.qguxxi.synthvoice.ui.components.under.PrivacyPolicy
 import com.qguxxi.synthvoice.ui.theme.figmaTypography
-import com.qguxxi.synthvoice.untils.PermissionPreferences
 import com.stevdzasan.onetap.OneTapSignInWithGoogle
 import com.stevdzasan.onetap.rememberOneTapSignInState
 

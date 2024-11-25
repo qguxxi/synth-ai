@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package com.qguxxi.synthvoice.ui.screen.home
 
 import android.content.Context
@@ -28,12 +30,12 @@ import com.airbnb.lottie.compose.rememberLottieComposition
 import com.qguxxi.synthvoice.R
 import com.qguxxi.synthvoice.ui.theme.TapperTypography
 import com.qguxxi.synthvoice.ui.theme.figmaTypography
-import com.qguxxi.synthvoice.untils.TextToSpeechManager
 
 @Composable
 fun HomeScreen(
-    context : Context
+    context : Context ,
 ) {
+
 
     var isLoading by remember { mutableStateOf(false) }
     val composition1 by rememberLottieComposition(spec = LottieCompositionSpec.RawRes(R.raw.gradient))
@@ -71,7 +73,8 @@ fun HomeScreen(
         Spacer(modifier = Modifier.weight(3f))
 
         Button(
-            onClick = {}
+            onClick = {
+            }
         ) {
             Text(text = "Gửi câu hỏi")
         }
