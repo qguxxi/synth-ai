@@ -1,8 +1,5 @@
-@file:Suppress("DEPRECATION")
+package com.qguxxi.synthvoice.ui.screen
 
-package com.qguxxi.synthvoice.ui.screen.home
-
-import android.content.Context
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -21,7 +18,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.airbnb.lottie.compose.LottieAnimation
@@ -34,12 +30,7 @@ import com.qguxxi.synthvoice.ui.theme.TapperTypography
 import com.qguxxi.synthvoice.ui.theme.figmaTypography
 
 @Composable
-fun HomeScreen(
-    context : Context ,
-    navController : NavController
-) {
-
-
+fun SettingScreen(navController : NavController) {
     var isLoading by remember { mutableStateOf(false) }
     val composition1 by rememberLottieComposition(spec = LottieCompositionSpec.RawRes(R.raw.gradient))
     Column(
@@ -72,7 +63,7 @@ fun HomeScreen(
                 iterations = LottieConstants.IterateForever
             )
         }
-        Text(text = stringResource(id = R.string.ai), style = TapperTypography.bodyMedium)
+        Text(text = stringResource(id = R.string.ai) , style = TapperTypography.bodyMedium)
         Spacer(modifier = Modifier.weight(3f))
 
         Button(
@@ -87,13 +78,4 @@ fun HomeScreen(
         Spacer(modifier = Modifier.weight(1f))
         BottomAppBar(navController = navController)
     }
-
-}
-
-@Preview(
-    showBackground = true
-)
-@Composable
-fun HomeScreenPreview() {
-
 }

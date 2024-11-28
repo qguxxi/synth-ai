@@ -9,6 +9,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.qguxxi.synthvoice.data.source.local.UserSharePreference
+import com.qguxxi.synthvoice.ui.screen.SettingScreen
 import com.qguxxi.synthvoice.ui.screen.home.HomeScreen
 import com.qguxxi.synthvoice.ui.screen.permission.AudioRecordScreen
 import com.qguxxi.synthvoice.ui.screen.permission.CameraPerScreen
@@ -18,7 +19,6 @@ import com.qguxxi.synthvoice.ui.screen.permission.ReadExternalScreen
 import com.qguxxi.synthvoice.ui.screen.signin.SignInScreen
 import com.qguxxi.synthvoice.ui.screen.signin.SignInViewModel
 import com.qguxxi.synthvoice.untils.PermissionPreferences
-import com.qguxxi.synthvoice.untils.SignInPreferences
 
 
 enum class Screen {
@@ -29,6 +29,7 @@ enum class Screen {
     NOTIFICATION,
     READEXTERNAL,
     AUDIORECORD,
+    SETTING
 }
 
 @Composable
@@ -47,7 +48,7 @@ fun TapperNavHost(
             )
         }
         composable(route = Screen.HOME.name) {
-            HomeScreen(context = context)
+            HomeScreen(context = context, navController)
         }
         composable(route = Screen.READEXTERNAL.name) {
             ReadExternalScreen(navController, activity)
@@ -64,5 +65,9 @@ fun TapperNavHost(
         composable(route = Screen.NOTIFICATION.name) {
             NotificationPerScreen(activity,navController = navController)
         }
+        composable(route = Screen.SETTING.name) {
+            SettingScreen(navController)
+        }
     }
 }
+
