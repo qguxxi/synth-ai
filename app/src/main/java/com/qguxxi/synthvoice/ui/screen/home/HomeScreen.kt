@@ -23,10 +23,12 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import com.airbnb.lottie.compose.LottieAnimation
 import com.airbnb.lottie.compose.LottieCompositionSpec
 import com.airbnb.lottie.compose.LottieConstants
@@ -47,7 +49,9 @@ fun HomeScreen(
         bottomBar = {
             Row(
                 horizontalArrangement = Arrangement.Center,
-                modifier = Modifier.fillMaxWidth().padding(24.dp)
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(24.dp)
             ) {
                 BottomAppBar(
                     navController = navController ,
@@ -89,13 +93,6 @@ fun HomeScreen(
             }
             Text(text = stringResource(id = R.string.ai), style = TapperTypography.bodyMedium)
             Spacer(modifier = Modifier.weight(3f))
-
-            Button(
-                onClick = {
-                }
-            ) {
-                Text(text = "Gửi câu hỏi")
-            }
             if (isLoading) {
                 CircularProgressIndicator()
             }
@@ -112,5 +109,5 @@ fun HomeScreen(
 )
 @Composable
 fun HomeScreenPreview() {
-
+    HomeScreen(context = LocalContext.current , navController = rememberNavController())
 }
