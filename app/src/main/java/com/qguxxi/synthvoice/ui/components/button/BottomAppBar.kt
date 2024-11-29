@@ -1,9 +1,13 @@
 package com.qguxxi.synthvoice.ui.components.button
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.runtime.Composable
@@ -19,7 +23,7 @@ import com.qguxxi.synthvoice.R
 import com.qguxxi.synthvoice.navigation.Screen
 
 @Composable
-fun BottomAppBar(navController: NavController) {
+fun BottomAppBar(navController: NavController,modifier : Modifier = Modifier) {
     // Lấy thông tin màn hình hiện tại từ NavController
     val currentDestination = navController.currentDestination
 
@@ -30,6 +34,9 @@ fun BottomAppBar(navController: NavController) {
 
     Row(
         modifier = Modifier
+            .background(color = Color(0xFFD1D1D1), shape = RoundedCornerShape(size = 20.dp) )
+            .width(200.dp)
+            .height(60.dp)
             .fillMaxWidth()
             .padding(16.dp),
         horizontalArrangement = Arrangement.SpaceEvenly

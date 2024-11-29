@@ -1,12 +1,14 @@
-@file:Suppress("DEPRECATION")
 
 package com.qguxxi.synthvoice.ui.screen.home
 
 import android.content.Context
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Button
@@ -39,12 +41,21 @@ fun HomeScreen(
     context : Context ,
     navController : NavController
 ) {
-
-
     var isLoading by remember { mutableStateOf(false) }
     val composition1 by rememberLottieComposition(spec = LottieCompositionSpec.RawRes(R.raw.gradient))
     Scaffold(
-        bottomBar = { BottomAppBar(navController = navController) }
+        bottomBar = {
+            Row(
+                horizontalArrangement = Arrangement.Center,
+                modifier = Modifier.fillMaxWidth().padding(24.dp)
+            ) {
+                BottomAppBar(
+                    navController = navController ,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                )
+            }
+        }
     ) {
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
