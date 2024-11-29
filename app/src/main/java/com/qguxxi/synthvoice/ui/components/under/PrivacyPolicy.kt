@@ -99,7 +99,7 @@ fun PrivacyPolicy(
 @Preview
 @Composable
 private fun PrivacyPolicyPreview() {
-    GoogleButton(onClick = { /*TODO*/ })
+    GoogleButton(onClick = { /*TODO*/ }, isLoading = false)
     PrivacyPolicy(
         privacyOnClick = { /*TODO*/ },
         termServiceOnClick = { /*TODO*/ },
