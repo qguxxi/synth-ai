@@ -21,5 +21,11 @@
     <string name="ai_warning_1">AI can sometimes provide unreasonable answers</string>
     <string name="ai_warning_2">Please filter information carefully.</string>
     <string name="ai">Daisy</string>
-    <string name="chatgpt_api"></string>
+    <string name="dark_theme">Dark Theme</string>
+    <string name="dark_theme_des">Turn off the light</string>
+    <string name="change_language">Change Language</string>
+    <string name="change_language_des">Switch to Vietnamese</string>
+    <string name="log_out">Log Out</string>
+    <string name="log_out_des">Quit the app</string>
+    <string name="version">V1.0.0</string>
 </resources>

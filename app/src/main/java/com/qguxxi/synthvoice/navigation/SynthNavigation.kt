@@ -9,7 +9,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.qguxxi.synthvoice.data.source.local.UserSharePreference
-import com.qguxxi.synthvoice.ui.screen.SettingScreen
+import com.qguxxi.synthvoice.ui.screen.settting.SettingScreen
 import com.qguxxi.synthvoice.ui.screen.home.HomeScreen
 import com.qguxxi.synthvoice.ui.screen.permission.AudioRecordScreen
 import com.qguxxi.synthvoice.ui.screen.permission.CameraPerScreen
@@ -66,7 +66,7 @@ fun TapperNavHost(
             NotificationPerScreen(activity,navController = navController)
         }
         composable(route = Screen.SETTING.name) {
-            SettingScreen(navController)
+            SettingScreen(context,navController)
         }
     }
 }
