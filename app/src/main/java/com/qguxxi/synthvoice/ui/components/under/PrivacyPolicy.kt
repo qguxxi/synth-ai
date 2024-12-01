@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.VerticalDivider
@@ -54,11 +55,12 @@ fun PrivacyPolicy(
             Spacer(modifier = Modifier.width(16.dp))
             Text(
                 text = stringResource(id = stringIdRes),
-                style = figmaTypography.labelSmall.copy(Color.Black),
+                style = figmaTypography.labelSmall,
+                color = MaterialTheme.colorScheme.onSurface,
                 modifier = Modifier.padding(18.dp)
             )
         }
-        HorizontalDivider(color = Color.Black)
+        HorizontalDivider(color = MaterialTheme.colorScheme.onSurface)
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
             modifier = Modifier
@@ -67,10 +69,12 @@ fun PrivacyPolicy(
                 .alpha(0.5f)
         ) {
             Text(text = "By using the app, you accept our Terms of Service",
-                style = figmaTypography.labelSmall.copy(color = Color.Black),
+                style = figmaTypography.labelSmall,
+                color = MaterialTheme.colorScheme.onSurface
                 )
             Text(text = "and acknowledge reading the Privacy Policy",
-                style = figmaTypography.labelSmall.copy(color = Color.Black),
+                style = figmaTypography.labelSmall,
+                color = MaterialTheme.colorScheme.onSurface
             )
         }
         Row(
@@ -81,14 +85,16 @@ fun PrivacyPolicy(
             TextButton(onClick = privacyOnClick) {
                 Text(
                     text = stringResource(id = R.string.privacy_policy),
-                    style = figmaTypography.labelMedium.copy(Color.Black)
+                    style = figmaTypography.labelMedium,
+                    color = MaterialTheme.colorScheme.onSurface
                 )
             }
             VerticalDivider(modifier = Modifier.height(12.dp))
             TextButton(onClick = termServiceOnClick) {
                 Text(
                     text = stringResource(id = R.string.terms_services),
-                    style = figmaTypography.labelMedium.copy(Color.Black)
+                    style = figmaTypography.labelMedium,
+                    color = MaterialTheme.colorScheme.onSurface
                 )
             }
         }

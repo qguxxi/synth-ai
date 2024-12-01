@@ -1,14 +1,18 @@
 package com.qguxxi.synthvoice.ui.components.button
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.tooling.preview.Preview
@@ -19,7 +23,7 @@ import com.qguxxi.synthvoice.R
 import com.qguxxi.synthvoice.navigation.Screen
 
 @Composable
-fun BottomAppBar(navController: NavController) {
+fun BottomAppBar(navController: NavController,modifier : Modifier = Modifier) {
     // Lấy thông tin màn hình hiện tại từ NavController
     val currentDestination = navController.currentDestination
 
@@ -27,9 +31,12 @@ fun BottomAppBar(navController: NavController) {
     val isHomeScreen = currentDestination?.route == Screen.HOME.name
     // Kiểm tra nếu đang ở màn hình Settings
     val isSettingsScreen = currentDestination?.route == Screen.SETTING.name
-
+    val scheme = MaterialTheme.colorScheme
     Row(
         modifier = Modifier
+            .background(color = scheme.surfaceVariant, shape = RoundedCornerShape(size = 20.dp) )
+            .width(200.dp)
+            .height(60.dp)
             .fillMaxWidth()
             .padding(16.dp),
         horizontalArrangement = Arrangement.SpaceEvenly
@@ -45,7 +52,8 @@ fun BottomAppBar(navController: NavController) {
                     }
                 }
             },
-            enabled = !isHomeScreen // Vô hiệu hóa nếu đang ở màn hình Home
+            enabled = !isHomeScreen, // Vô hiệu hóa nếu đang ở màn hình Home
+
         ) {
             Icon(
                 imageVector = if (isHomeScreen)
@@ -53,7 +61,7 @@ fun BottomAppBar(navController: NavController) {
                 else
                     ImageVector.vectorResource(id = R.drawable.home),
                 contentDescription = "Trang chủ",
-                tint = Color.Unspecified
+                tint = scheme.onSurfaceVariant
             )
         }
 
@@ -76,7 +84,7 @@ fun BottomAppBar(navController: NavController) {
                 else
                     ImageVector.vectorResource(id = R.drawable.settings),
                 contentDescription = "Cài đặt",
-                tint = Color.Unspecified
+                tint = scheme.onSecondaryContainer
             )
         }
     }

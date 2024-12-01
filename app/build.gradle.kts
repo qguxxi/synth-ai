@@ -78,16 +78,7 @@ dependencies {
 
     implementation(libs.androidx.room.common)
     implementation(libs.androidx.room.ktx)
-    // Testing
-    androidTestImplementation(libs.androidx.espresso.core)
-    androidTestImplementation(libs.androidx.junit.v115)
-
-    implementation(libs.retrofit)
-    implementation(libs.converter.gson)
-    implementation(libs.gson)
-    implementation(libs.okhttp)
-    // Animation
-    implementation(libs.androidx.animation)
+w
 //      Splash Screen
     implementation(libs.androidx.core.splashscreen)
     implementation(libs.androidx.datastore.preferences)
