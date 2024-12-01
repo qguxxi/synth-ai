@@ -58,46 +58,49 @@ val figmaTypography = Typography(
         fontSize = 40.sp,
         fontFamily = bodyFontFamily,
         fontWeight = FontWeight(500),
-        color = Color(0xFF5C5C5C),
     ),
     displayLarge =  TextStyle(
         fontSize = 96.sp,
         fontFamily = bodyFontFamily,
         fontWeight = FontWeight(700),
-        color = Color(0xFF000000),
     ),
     bodySmall = TextStyle(
         fontSize = 14.sp,
         fontFamily = bodyFontFamily,
         fontWeight = FontWeight(700),
-        color = Color(0xFFFFFFFF),
     ),
     labelSmall = TextStyle(
         fontSize = 12.sp,
         fontFamily = bodyFontFamily,
         fontWeight = FontWeight(500),
-        color = Color(0xFFFFFFFF),
     ),
 
     bodyMedium = TextStyle(
         fontSize = 24.sp,
         fontFamily = bodyFontFamily,
         fontWeight = FontWeight(600),
-        color = Color(0xFF5C5C5C),
 
+    ),
+    displaySmall = TextStyle(
+        fontSize = 16.sp,
+        fontFamily = bodyFontFamily,
+        fontWeight = FontWeight(400),
+    ),
+    headlineSmall = TextStyle(
+        fontSize = 12.sp,
+        fontFamily = bodyFontFamily,
+        fontWeight = FontWeight(400),
     ),
 
     labelLarge = TextStyle(
         fontSize = 28.sp,
         fontFamily = bodyFontFamily,
         fontWeight = FontWeight(600),
-        color = Color(0xFF000000),
     ),
     titleMedium = TextStyle(
         fontSize = 20.sp,
         fontFamily = bodyFontFamily,
         fontWeight = FontWeight(600),
-        color = Color(0xFFFFFFFF),
     ),
     titleSmall = TextStyle(
         fontSize = 12.sp,

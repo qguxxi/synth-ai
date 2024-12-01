@@ -11,6 +11,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonColors
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -26,10 +27,12 @@ import com.qguxxi.synthvoice.ui.theme.figmaTypography
 
 @Composable
 fun PermissionButton(permClick:() -> Unit, @StringRes idString: Int, @DrawableRes idIcon : Int, modifier: Modifier = Modifier) {
+    val scheme = MaterialTheme.colorScheme
+
     Button(
         onClick = permClick,
         shape = RoundedCornerShape(10.dp),
-        colors = ButtonColors(Color.Black, Color.White, Color.Black, Color.Black),
+        colors = ButtonColors(scheme.primaryContainer, scheme.onPrimaryContainer,scheme.primaryContainer, scheme.primaryContainer),
         modifier = modifier
             .height(36.dp)
             .width(250.dp)
@@ -42,7 +45,6 @@ fun PermissionButton(permClick:() -> Unit, @StringRes idString: Int, @DrawableRe
             Icon(
                 imageVector = ImageVector.vectorResource(idIcon),
                 contentDescription = "google",
-                tint = Color.Unspecified
                 )
             Text(
                 text = stringResource(id = idString),

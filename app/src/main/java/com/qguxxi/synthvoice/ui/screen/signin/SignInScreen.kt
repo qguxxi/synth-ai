@@ -1,8 +1,10 @@
 package com.qguxxi.synthvoice.ui.screen.signin
 
 import android.Manifest
+import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.content.res.Configuration
 import android.net.Uri
 import android.util.Log
 import androidx.compose.foundation.background
@@ -13,6 +15,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -31,12 +34,15 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.core.content.ContextCompat
 import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import com.qguxxi.synthvoice.BuildConfig
 import com.qguxxi.synthvoice.R
+import com.qguxxi.synthvoice.data.source.local.UserSharePreference
 import com.qguxxi.synthvoice.navigation.Screen
 import com.qguxxi.synthvoice.ui.components.button.GoogleButton
 import com.qguxxi.synthvoice.ui.components.under.PrivacyPolicy
 import com.qguxxi.synthvoice.ui.theme.figmaTypography
+import com.qguxxi.synthvoice.untils.PermissionPreferences
 import com.stevdzasan.onetap.OneTapSignInWithGoogle
 import com.stevdzasan.onetap.rememberOneTapSignInState
 
@@ -103,7 +109,7 @@ fun SignInScreen(
     Column(
         horizontalAlignment = Alignment.CenterHorizontally ,
         modifier = Modifier
-            .background(Color(0xFF0DBDBDB))
+            .background(MaterialTheme.colorScheme.surface)
             .fillMaxSize()
     ) {
         Spacer(modifier = Modifier.weight(1f))
@@ -112,7 +118,11 @@ fun SignInScreen(
             contentAlignment = Alignment.Center,
             modifier = Modifier.size(300.dp),
             ) {
-            Icon(imageVector = ImageVector.vectorResource(id = R.drawable.logo_icon) , contentDescription = null)
+            Icon(
+                imageVector = ImageVector.vectorResource(id = R.drawable.logo_icon),
+                contentDescription = null,
+                tint = MaterialTheme.colorScheme.onBackground
+                )
 
         }
 
@@ -122,8 +132,8 @@ fun SignInScreen(
             horizontalAlignment = Alignment.CenterHorizontally ,
             modifier = Modifier.fillMaxWidth()
         ) {
-            Text(text = "Welcome to" , style = figmaTypography.displayMedium)
-            Text(text = "Synth AI" , style = figmaTypography.displayLarge)
+            Text(text = "Welcome to" , style = figmaTypography.displayMedium.copy(MaterialTheme.colorScheme.onSurface))
+            Text(text = "Synth AI" , style = figmaTypography.displayLarge.copy(MaterialTheme.colorScheme.onSurface))
         }
 
         Spacer(modifier = Modifier.weight(2f))
@@ -151,7 +161,14 @@ fun SignInScreen(
 
 }
 
-@Preview
+@Preview(
+    uiMode = Configuration.UI_MODE_NIGHT_YES,
+    name = "DefaultPreviewDark"
+)
 @Composable
 private fun SignInPreview() {
+    SignInScreen(navController = rememberNavController() , signInViewModel = SignInViewModel(
+        permissionPreferences = PermissionPreferences(LocalContext.current), UserSharePreference(LocalContext.current)
+    )
+    )
 }
