@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -36,12 +37,13 @@ fun ReadExternalScreen(
     navController: NavController,
     activity: Activity
 ) {
+    val scheme = MaterialTheme.colorScheme
     Surface(
-        modifier =  Modifier.fillMaxSize()
+        modifier =  Modifier.fillMaxSize(),
+        color = scheme.surface
     ) {
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
-            modifier = Modifier.fillMaxSize()
         ) {
             Spacer(modifier = Modifier.weight(3f))
             Box(
@@ -51,9 +53,17 @@ fun ReadExternalScreen(
                 Icon(imageVector = ImageVector.vectorResource(id = R.drawable.logo_icon) , contentDescription = null)
             }
             Spacer(modifier = Modifier.weight(5f))
-            Text(text = "Interact Seamlessly with AI", style = figmaTypography.bodyMedium)
+            Text(
+                text = "Interact Seamlessly with AI",
+                style = figmaTypography.bodyMedium,
+                color = scheme.onSurface
+                )
             Spacer(modifier = Modifier.weight(1f))
-            Text(text = "Voice Activated and Ready", style = figmaTypography.labelLarge)
+            Text(
+                text = "Voice Activated and Ready",
+                style = figmaTypography.labelLarge,
+                color = scheme.onSurface
+                )
             Spacer(modifier = Modifier.weight(5f))
             PermissionButton(
                 permClick = { ReadExternalPermission.checkAndRequestReadPermission(navController = navController,activity) },

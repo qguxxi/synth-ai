@@ -28,4 +28,6 @@
     <string name="log_out">Log Out</string>
     <string name="log_out_des">Quit the app</string>
     <string name="version">V1.0.0</string>
+    <string name="version_1">Version App</string>
+    <string name="version_1_des">Version current of the app</string>
 </resources>

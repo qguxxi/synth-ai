@@ -13,6 +13,7 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonColors
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -28,10 +29,12 @@ import com.qguxxi.synthvoice.ui.theme.figmaTypography
 
 @Composable
 fun GoogleButton(onClick : () -> Unit ,isLoading:Boolean,modifier : Modifier = Modifier) {
+    val scheme = MaterialTheme.colorScheme
+
     Button(
         onClick = onClick,
         shape = RoundedCornerShape(10.dp) ,
-        colors = ButtonColors(Color.Black , Color.White , Color.Black , Color.Black) ,
+        colors = ButtonColors(scheme.primaryContainer,scheme.onPrimaryContainer,scheme.primaryContainer,scheme.primaryContainer) ,
         modifier = Modifier
             .height(42.dp)
             .width(200.dp)
@@ -50,7 +53,7 @@ fun GoogleButton(onClick : () -> Unit ,isLoading:Boolean,modifier : Modifier = M
             } else {
                 CircularProgressIndicator(
                     modifier = Modifier.size(20.dp),
-                    color = Color.White,
+                    color = scheme.onPrimaryContainer,
                     strokeWidth = 2.dp,
                 )
             }
@@ -58,6 +61,7 @@ fun GoogleButton(onClick : () -> Unit ,isLoading:Boolean,modifier : Modifier = M
             Text(
                 text = stringResource(id = R.string.google) ,
                 style = figmaTypography.bodySmall ,
+                color = MaterialTheme.colorScheme.onPrimaryContainer
             )
             Spacer(modifier = Modifier.weight(1f))
         }

@@ -19,7 +19,7 @@ fun TextButtonGo(onClick: () -> Unit,modifier: Modifier = Modifier) {
     TextButton(
         onClick = onClick,
         colors = ButtonDefaults.buttonColors(
-            backgroundDark
+            MaterialTheme.colorScheme.primaryContainer,MaterialTheme.colorScheme.onPrimaryContainer
         ),
         shape = RoundedCornerShape(10.dp),
         contentPadding = PaddingValues(12.dp),

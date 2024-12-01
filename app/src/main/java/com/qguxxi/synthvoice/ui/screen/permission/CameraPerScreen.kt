@@ -48,7 +48,7 @@ fun CameraPerScreen(navController: NavController,activity: Activity,modifier: Mo
             Spacer(modifier = modifier.weight(5f))
             PermissionButton(
                 permClick = { CameraPermission.checkAndRequestCameraPermission(navController = navController, activity = activity) },
-                idIcon = R.drawable.camera,
+                idIcon = R.drawable.photo_camera,
                 idString = R.string.camera,
                 modifier = Modifier
                     .align(Alignment.CenterHorizontally)
