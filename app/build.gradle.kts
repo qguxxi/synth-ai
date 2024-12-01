@@ -79,6 +79,7 @@ dependencies {
 
     implementation(libs.androidx.room.common)
     implementation(libs.androidx.room.ktx)
+    implementation(libs.androidx.appcompat)
     dependencies {
         implementation("androidx.compose.material3:material3:1.3.1")
         // Testing

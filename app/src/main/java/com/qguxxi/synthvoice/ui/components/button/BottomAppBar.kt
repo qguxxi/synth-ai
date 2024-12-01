@@ -10,9 +10,9 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.tooling.preview.Preview
@@ -31,10 +31,10 @@ fun BottomAppBar(navController: NavController,modifier : Modifier = Modifier) {
     val isHomeScreen = currentDestination?.route == Screen.HOME.name
     // Kiểm tra nếu đang ở màn hình Settings
     val isSettingsScreen = currentDestination?.route == Screen.SETTING.name
-
+    val scheme = MaterialTheme.colorScheme
     Row(
         modifier = Modifier
-            .background(color = Color(0xFFD1D1D1), shape = RoundedCornerShape(size = 20.dp) )
+            .background(color = scheme.surfaceVariant, shape = RoundedCornerShape(size = 20.dp) )
             .width(200.dp)
             .height(60.dp)
             .fillMaxWidth()
@@ -52,7 +52,8 @@ fun BottomAppBar(navController: NavController,modifier : Modifier = Modifier) {
                     }
                 }
             },
-            enabled = !isHomeScreen // Vô hiệu hóa nếu đang ở màn hình Home
+            enabled = !isHomeScreen, // Vô hiệu hóa nếu đang ở màn hình Home
+
         ) {
             Icon(
                 imageVector = if (isHomeScreen)
@@ -60,7 +61,7 @@ fun BottomAppBar(navController: NavController,modifier : Modifier = Modifier) {
                 else
                     ImageVector.vectorResource(id = R.drawable.home),
                 contentDescription = "Trang chủ",
-                tint = Color.Unspecified
+                tint = scheme.onSurfaceVariant
             )
         }
 
@@ -83,7 +84,7 @@ fun BottomAppBar(navController: NavController,modifier : Modifier = Modifier) {
                 else
                     ImageVector.vectorResource(id = R.drawable.settings),
                 contentDescription = "Cài đặt",
-                tint = Color.Unspecified
+                tint = scheme.onSecondaryContainer
             )
         }
     }
